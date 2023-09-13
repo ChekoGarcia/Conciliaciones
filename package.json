@@ -9,6 +9,6 @@
     "morgan": "^1.10.0"
   },
   "scripts": {
-    "test": "node server.js"
+    "start": "node index.js"
   }
 }
