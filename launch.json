@@ -7,7 +7,7 @@
           "type": "pwa-chrome",
           "request": "launch",
           "name": "Launch Chrome against localhost",
-          "url": "https://172.31.47.179:3000",
+          "url": "https://35.168.19.217:3000",
           "webRoot": "${workspaceFolder}"
       }
   ]
