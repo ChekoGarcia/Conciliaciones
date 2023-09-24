@@ -63,14 +63,14 @@ const parseFile = async (req) => {
         var period = year + "/" + month;
         var dateFormat = year + "/" + month + "/" + day + "/";
         var fileName = `${this.originalFilename}`;
-        var tableName = tableMex;
+        var tableName = tableArg;
         //console.log(fileName)
-        var filePath = "loaded/MEX/" + dateFormat + todayTS + "-" + fileName;
+        var filePath = "loaded/ARG/" + dateFormat + todayTS + "-" + fileName;
         //console.log(filePath)
         //console.log(fileName)
         if (filePath.includes("export")) {
-          filePath = "loaded/ARG/" + dateFormat + todayTS + "-" + fileName;
-          tableName = tableArg;
+          filePath = "loaded/MEX/" + dateFormat + todayTS + "-" + fileName;
+          tableName = tableMex;
           //console.log(filePath)
           //console.log(fileName)
         }
