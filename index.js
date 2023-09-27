@@ -7,7 +7,7 @@ app.set("json spaces", 5); // to pretify json response
 const PORT = process.env.PORT;
 const fileParser = require("./file_parser");
 const fileParserArg = require("./file_parser_arg");
-const putObject = require("./put_object_lambda");
+const generateConciliation = require("./generate_conciliation");
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
@@ -45,8 +45,8 @@ app.post("/api/upload/arg", async (req, res) => {
     });
 });
 
-app.post("/api/generate/reconciliation", async (req, res) => {
-  await putObject(req)
+app.post("/api/generate/conciliation", async (req, res) => {
+  await generateConciliation(req)
     .then((data) => {
       res.status(200).json({
         message: "Success",
